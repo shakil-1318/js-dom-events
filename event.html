@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <h1>event nie clickbaji</h1>
+    <button onclick="document.body.style.backgroundColor = 'red'">click me: red</button>
+    <button onclick="makeYellow()">click me: yellow</button>
+    <button id="blue-btn">click me: blue</button>
+    <button id="tomato-btn">click me: tomato</button>
+    <button id="green-btn">click me: green</button>
+    <button id="pink-btn">click me: pink</button>
+    <button id="indigo-btn">click me: indigo</button>
+    <p id="clicking-method"></p>
+    <input id="update-text" type="text">
+    <button id="update-btn">update</button>
+
+    <script src="./js/another.js"></script>
+    <script>
+       document.getElementById('update-btn').addEventListener('click', function(){
+            const updateText = document.getElementById('update-text');
+            const p = document.getElementById('clicking-method');
+            p.innerText = updateText.value;
+            updateText.value = ''
+            
+       })
+    </script>
+</body>
+</html>

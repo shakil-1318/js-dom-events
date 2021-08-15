@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="update-name">
+    <button id="update-btn">update</button>
+    <p id="make-para"></p>
+    <button onclick="makingPara()"> click me:1</button>
+    <button id="event-btn">click me :2</button>
+
+    <script>
+        //using function
+        function makingPara(){
+            const p = document.getElementById('make-para');
+            p.innerText = 'using onlcilck function'
+        }
+
+        document.getElementById('event-btn').addEventListener('click', function(){
+            const p = document.getElementById('make-para');
+            p.innerText = 'using by addEventListener direct action'
+        })
+
+        document.getElementById('update-btn').addEventListener('click', function(){
+            const updateName = document.getElementById('update-name');
+            const p = document.getElementById('make-para');
+            p.innerText = updateName.value;
+            updateName.value = '';
+        })
+
+
+    </script>
+</body>
+</html>
